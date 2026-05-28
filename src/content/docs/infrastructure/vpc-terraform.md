@@ -1,5 +1,6 @@
 ---
 title: "[TP] Créer un VPC avec Terraform"
+date: 2026-05-28
 description: Déployer un VPC AWS avec sous-réseaux public et privé, Bastion Host et instance NAT via Terraform.
 ---
 

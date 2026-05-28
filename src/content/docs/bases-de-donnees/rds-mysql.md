@@ -1,5 +1,6 @@
 ---
 title: "TP : RDS MySQL Free Tier"
+date: 2026-05-28
 description: Déployer une base de données MySQL managée avec Amazon RDS, la sécuriser avec Security Groups et effectuer des opérations CRUD.
 ---
 

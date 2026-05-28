@@ -1,5 +1,6 @@
 ---
 title: "TP : Infrastructure as Code avec CloudFormation"
+date: 2026-05-28
 description: Créer des templates YAML CloudFormation, déployer des stacks avec S3 et Lambda, gérer les mises à jour avec les change sets.
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "TP : Cartographie sécurité AWS avec CloudFox"
+date: 2026-05-28
 description: Réaliser une cartographie sécurité offensive contrôlée d'un compte AWS avec CloudFox — inventaire des services, analyse IAM, relations de confiance, permissions sensibles et buckets S3.
 ---
 

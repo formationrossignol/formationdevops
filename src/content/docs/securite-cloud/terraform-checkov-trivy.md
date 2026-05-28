@@ -1,5 +1,6 @@
 ---
 title: "TP : Infrastructure as Code sécurisée avec Terraform, Checkov et Trivy"
+date: 2026-05-28
 description: Auditer du code Terraform avant toute création de ressource AWS avec Checkov et Trivy.
 ---
 

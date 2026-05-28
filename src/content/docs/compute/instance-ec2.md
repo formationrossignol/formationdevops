@@ -1,5 +1,6 @@
 ---
 title: "TP : Lancer une instance EC2 Free Tier"
+date: 2026-05-28
 description: Lancer et configurer une instance EC2 éligible au Free Tier AWS.
 ---
 

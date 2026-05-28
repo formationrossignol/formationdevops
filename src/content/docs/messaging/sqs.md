@@ -1,5 +1,6 @@
 ---
 title: "TP : SQS Free Tier"
+date: 2026-05-28
 description: Envoyer et lire des messages avec Amazon SQS en Free Tier.
 ---
 

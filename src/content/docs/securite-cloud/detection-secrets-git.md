@@ -1,5 +1,6 @@
 ---
 title: "TP : Détection de secrets dans un dépôt Git"
+date: 2026-05-28
 description: Identifier des secrets exposés dans un dépôt Git avec Gitleaks et TruffleHog, corriger les fichiers, nettoyer l'historique et mettre en place un contrôle avant commit.
 ---
 

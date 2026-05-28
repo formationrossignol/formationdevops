@@ -1,5 +1,6 @@
 ---
 title: "TP : Analyser les chemins d'escalade IAM avec PMapper"
+date: 2026-05-28
 description: Utiliser PMapper pour analyser les permissions IAM et détecter un chemin d'escalade de privilèges via sts:AssumeRole.
 ---
 

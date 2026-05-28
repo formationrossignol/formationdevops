@@ -1,5 +1,6 @@
 ---
 title: "TP : Fonction serverless minimale avec AWS SAM, cfn-lint et Checkov"
+date: 2026-05-28
 description: Déployer une fonction Lambda avec AWS SAM et analyser les permissions IAM avec cfn-lint et Checkov.
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "TP : Site web statique sur S3"
+date: 2026-05-28
 description: Héberger un site web statique sur Amazon S3 avec Static Website Hosting, bucket policies et accès public HTTP.
 ---
 

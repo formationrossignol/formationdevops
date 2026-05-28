@@ -1,5 +1,6 @@
 ---
 title: "TP 2 : Escalade IAM contrôlée"
+date: 2026-05-28
 description: Analyser une configuration IAM vulnérable avec Cloudsplaining et PMapper pour identifier et corriger une escalade de privilèges indirecte via iam:CreatePolicyVersion.
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "TP : Inventaire sécurité AWS avec Prowler"
+date: 2026-05-28
 description: Réaliser un inventaire sécurité d'un compte AWS avec Prowler, ciblé sur IAM et les contrôles du compte.
 ---
 

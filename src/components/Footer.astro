@@ -1,0 +1,47 @@
+---
+import EditLink from 'virtual:starlight/components/EditLink';
+import Pagination from 'virtual:starlight/components/Pagination';
+---
+
+<footer class="sl-flex">
+  <div class="meta sl-flex">
+    <EditLink />
+  </div>
+  <Pagination />
+  <div class="site-footer">
+    <a href="/mentions-legales/" class="mentions-legales-link">Mentions légales</a>
+  </div>
+</footer>
+
+<style>
+  footer {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .meta {
+    gap: 0.75rem 3rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-3);
+  }
+  .meta > :global(p:only-child) {
+    margin-inline-start: auto;
+  }
+  .site-footer {
+    text-align: center;
+    padding: 0.75rem 0 0.25rem;
+    border-top: 1px solid var(--sl-color-hairline-light);
+  }
+  .mentions-legales-link {
+    font-size: var(--sl-text-xs);
+    color: var(--sl-color-gray-4);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.15s;
+  }
+  .mentions-legales-link:hover {
+    opacity: 1;
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
 title: "TP : Automatiser EC2 avec User Data"
+date: 2026-05-28
 description: Lancer une instance EC2 qui se configure automatiquement au démarrage grâce à un script User Data pour déployer Apache et PHP sans intervention manuelle.
 ---
 

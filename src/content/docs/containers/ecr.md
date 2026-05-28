@@ -1,5 +1,6 @@
 ---
 title: "TP : Registry Docker privé avec ECR"
+date: 2026-05-28
 description: Créer un registry Docker privé avec Amazon ECR, builder une image Docker, s'authentifier et pousser l'image vers le registry.
 ---
 

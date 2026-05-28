@@ -1,5 +1,6 @@
 ---
 title: "TP : Créer des AMI avec Packer"
+date: 2026-05-28
 description: Maîtriser la création d'Amazon Machine Images personnalisées et reproductibles avec HashiCorp Packer.
 ---
 

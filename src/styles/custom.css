@@ -416,6 +416,7 @@ a[aria-current='page']:hover {
   top: 0;
   left: 0;
   width: 0%;
+  max-width: calc(100% - 6px);
   height: 3px;
   background: var(--sl-color-accent);
   z-index: 99999;

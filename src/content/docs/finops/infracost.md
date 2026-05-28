@@ -1,5 +1,6 @@
 ---
 title: "TP : Estimation FinOps avec Infracost"
+date: 2026-05-28
 description: Estimer le coût prévisionnel d'une infrastructure AWS décrite en Terraform avant tout déploiement, analyser les ressources coûteuses et mesurer l'impact d'optimisations FinOps.
 ---
 

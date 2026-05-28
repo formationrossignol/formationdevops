@@ -1,5 +1,6 @@
 ---
 title: "TP : Gestion des identités IAM"
+date: 2026-05-28
 description: Maîtriser IAM en créant utilisateurs, groupes, policies personnalisées, rôles et en sécurisant le compte root avec MFA.
 ---
 

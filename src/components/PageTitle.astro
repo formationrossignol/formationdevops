@@ -1,0 +1,62 @@
+---
+const { entry } = Astro.locals.starlightRoute;
+const { title, date, lastUpdated, template } = entry.data;
+
+function formatDate(d: Date) {
+  return d.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+const updatedDate = lastUpdated instanceof Date ? lastUpdated : undefined;
+const isSplash = template === 'splash';
+---
+
+<h1 id="_top">{title}</h1>
+
+{!isSplash && (
+  <div class="article-meta">
+    <span class="meta-author">Loïc Rossignol</span>
+    {date && (
+      <time class="meta-item" datetime={date.toISOString()}>
+        Publié le {formatDate(date)}
+      </time>
+    )}
+    {updatedDate && (
+      <time class="meta-item" datetime={updatedDate.toISOString()}>
+        Mis à jour le {formatDate(updatedDate)}
+      </time>
+    )}
+  </div>
+)}
+
+<style>
+  h1 {
+    margin-top: 1rem;
+    font-size: var(--sl-text-h1);
+    line-height: var(--sl-line-height-headings);
+    font-weight: 600;
+    color: var(--sl-color-white);
+  }
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem 0;
+    margin-top: 0.6rem;
+    margin-bottom: 1.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--sl-color-hairline-light);
+    font-size: var(--sl-text-sm);
+  }
+  .meta-author {
+    font-weight: 500;
+    color: var(--sl-color-gray-3);
+  }
+  .meta-item {
+    color: var(--sl-color-gray-4);
+  }
+  .meta-item::before {
+    content: '·';
+    margin: 0 0.5rem;
+    color: var(--sl-color-gray-5);
+  }
+</style>

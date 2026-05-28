@@ -1,5 +1,6 @@
 ---
 title: "TP : Traitement d'images avec Lambda et S3"
+date: 2026-05-28
 description: Créer un système serverless de traitement automatique d'images qui redimensionne les fichiers uploadés sur S3 via Lambda et Pillow.
 ---
 
