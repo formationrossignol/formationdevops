@@ -5,6 +5,10 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Formation AWS',
+      social: {
+        github: 'https://github.com/formationrossignol',
+        linkedin: 'https://www.linkedin.com/in/loicrossignol/',
+      },
       defaultLocale: 'root',
       locales: {
         root: {
@@ -13,8 +17,41 @@ export default defineConfig({
         },
       },
       sidebar: [
+        { label: 'Introduction au Cloud', slug: '' },
         {
-          label: 'Sécurité du cloud',
+          label: 'Fondamentaux du Cloud',
+          items: [
+            {
+              label: 'Infrastructure',
+              items: [
+                { label: 'TP : Créer un VPC avec Terraform', slug: 'infrastructure/vpc-terraform' },
+                { label: 'TP : Infrastructure as Code avec CloudFormation', slug: 'infrastructure/cloudformation' },
+                { label: 'TP : Créer des AMI avec Packer', slug: 'infrastructure/packer' },
+              ],
+            },
+            {
+              label: 'Compute',
+              items: [
+                { label: 'TP : Lancer une instance EC2', slug: 'compute/instance-ec2' },
+                { label: 'TP : Automatiser EC2 avec User Data', slug: 'compute/ec2-user-data' },
+              ],
+            },
+            {
+              label: 'Containers',
+              items: [
+                { label: 'TP : Registry Docker privé avec ECR', slug: 'containers/ecr' },
+              ],
+            },
+            {
+              label: 'Messaging',
+              items: [
+                { label: 'TP : SQS Free Tier', slug: 'messaging/sqs' },
+              ],
+            },
+          ],
+        },
+        {
+          label: 'Sécurité dans le Cloud',
           items: [
             { label: 'TP : Gestion des identités IAM', slug: 'securite-cloud/iam-free-tier' },
             { label: 'TP : Analyser les chemins IAM avec PMapper', slug: 'securite-cloud/tp-pmapper-iam' },
@@ -27,47 +64,15 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Infrastructure',
-          items: [
-            { label: 'TP : Créer un VPC avec Terraform', slug: 'infrastructure/vpc-terraform' },
-            { label: 'TP : Infrastructure as Code avec CloudFormation', slug: 'infrastructure/cloudformation' },
-            { label: 'TP : Créer des AMI avec Packer', slug: 'infrastructure/packer' },
-          ],
-        },
-        {
-          label: 'Compute',
-          items: [
-            { label: 'TP : Lancer une instance EC2', slug: 'compute/instance-ec2' },
-            { label: 'TP : Automatiser EC2 avec User Data', slug: 'compute/ec2-user-data' },
-          ],
-        },
-        {
-          label: 'Containers',
-          items: [
-            { label: 'TP : Registry Docker privé avec ECR', slug: 'containers/ecr' },
-          ],
-        },
-        {
-          label: 'Stockage & Serverless',
+          label: 'Stockage cloud',
           items: [
             { label: "TP : Traitement d'images avec Lambda et S3", slug: 'stockage/s3-lambda' },
             { label: 'TP : Site web statique sur S3', slug: 'stockage/s3-site-statique' },
-          ],
-        },
-        {
-          label: 'Bases de données',
-          items: [
             { label: 'TP : RDS MySQL Free Tier', slug: 'bases-de-donnees/rds-mysql' },
           ],
         },
         {
-          label: 'Messaging',
-          items: [
-            { label: 'TP : SQS Free Tier', slug: 'messaging/sqs' },
-          ],
-        },
-        {
-          label: 'FinOps',
+          label: 'FinOps & Conformité',
           items: [
             { label: 'TP : Estimation FinOps avec Infracost', slug: 'finops/infracost' },
           ],
