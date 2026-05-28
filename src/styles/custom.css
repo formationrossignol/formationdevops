@@ -406,3 +406,19 @@ a[aria-current='page']:hover {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--sl-color-gray-5); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--sl-color-gray-4); }
+
+/* ══════════════════════════════════════════
+   Reading progress bar
+   ══════════════════════════════════════════ */
+
+#reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--sl-color-accent);
+  z-index: 99999;
+  transition: width 0.05s linear;
+  pointer-events: none;
+}
