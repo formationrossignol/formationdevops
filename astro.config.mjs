@@ -21,6 +21,7 @@ export default defineConfig({
             { label: 'TP 2 : Escalade IAM contrôlée', slug: 'securite-cloud/tp2-escalade-iam-controlee' },
             { label: 'TP : Détection de secrets dans un dépôt Git', slug: 'securite-cloud/detection-secrets-git' },
             { label: 'TP : IaC sécurisée avec Terraform, Checkov et Trivy', slug: 'securite-cloud/terraform-checkov-trivy' },
+            { label: 'TP : Serverless sécurisé avec SAM, cfn-lint et Checkov', slug: 'securite-cloud/sam-cfn-lint-checkov' },
           ],
         },
         {
