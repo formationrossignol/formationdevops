@@ -19,6 +19,12 @@ export default defineConfig({
       sidebar: [
         { label: 'Introduction au Cloud', slug: '' },
         {
+          label: 'Cours',
+          items: [
+            { label: 'Sécurité AWS', slug: 'cours/securite-aws' },
+          ],
+        },
+        {
           label: 'Fondamentaux du Cloud',
           items: [
             {
