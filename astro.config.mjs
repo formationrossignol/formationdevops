@@ -68,6 +68,7 @@ export default defineConfig({
             { label: 'TP : Serverless sécurisé avec SAM, cfn-lint et Checkov', slug: 'securite-cloud/sam-cfn-lint-checkov' },
             { label: 'TP : Inventaire sécurité AWS avec Prowler', slug: 'securite-cloud/prowler' },
             { label: 'TP : Cartographie sécurité AWS avec CloudFox', slug: 'securite-cloud/cloudfox' },
+            { label: 'TP : Gouvernance AWS Organizations avec IAM et SCP', slug: 'securite-cloud/tp-organizations-iam-scp' },
           ],
         },
         {
