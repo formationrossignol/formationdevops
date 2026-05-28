@@ -141,7 +141,7 @@ Policy name : `Lambda-S3-ImageProcessor-Policy`
 2. Specify an ARN :
 
 ```
-arn:aws:lambda:eu-west-3:770693421928:layer:Klayers-p311-pillow:1
+arn:aws:lambda:us-east-1:770693421928:layer:Klayers-p312-Pillow:11
 ```
 
 > Source : Keith's Layers (Klayers), une source fiable de layers publics AWS.
