@@ -132,7 +132,7 @@ aucune SCP applicable ne bloque l'action
 ```
 
 :::caution[Compte de gestion hors périmètre SCP]
-Les SCP ne s'appliquent **jamais** au compte de gestion de l'organisation, même si elles sont attachées à la racine. Dans ce TP, l'utilisateur IAM `org-demo-operator` est créé dans le compte de gestion — la SCP `DenyCloudTrailDisable` ne le contraindra donc pas. L'objectif est d'illustrer le modèle conceptuel, pas de démontrer l'effet d'une SCP sur un compte membre distinct.
+Les SCP ne s'appliquent **jamais** au compte de gestion de l'organisation, même si elles sont attachées à la racine. Dans ce TP, l'utilisateur IAM `org-demo-operator` est créé dans le compte de gestion. La SCP `DenyCloudTrailDisable` ne le contraindra donc pas. L'objectif est d'illustrer le modèle conceptuel, pas de démontrer l'effet d'une SCP sur un compte membre distinct.
 :::
 
 ---
@@ -384,7 +384,7 @@ aws organizations list-policies \
   --profile "$PROFIL_AWS"
 ```
 
-La SCP existe dans l'organisation mais n'a pas encore d'effet — elle doit être attachée à une cible.
+La SCP existe dans l'organisation mais n'a pas encore d'effet : elle doit être attachée à une cible.
 
 ---
 
@@ -416,7 +416,7 @@ aws organizations list-targets-for-policy \
   --profile "$PROFIL_AWS"
 ```
 
-La SCP est attachée à Sandbox. Elle s'applique aux comptes membres placés dans cette unité. Dans ce TP, aucun compte membre supplémentaire n'est créé — l'objectif est de comprendre l'attachement et la gouvernance par unité organisationnelle.
+La SCP est attachée à Sandbox. Elle s'applique aux comptes membres placés dans cette unité. Dans ce TP, aucun compte membre supplémentaire n'est créé ; l'objectif est de comprendre l'attachement et la gouvernance par unité organisationnelle.
 
 ---
 
@@ -463,7 +463,7 @@ python -m json.tool politiques/deny-outside-eu-west-1.json
 ```bash
 SCP_REGION_ID=$(aws organizations create-policy \
   --name "$NOM_SCP_REGION" \
-  --description "Limite l'usage des services régionaux hors eu-west-1 — usage illustratif uniquement" \
+  --description "Limite l'usage des services régionaux hors eu-west-1, usage illustratif uniquement" \
   --type SERVICE_CONTROL_POLICY \
   --content file://politiques/deny-outside-eu-west-1.json \
   --profile "$PROFIL_AWS" \
@@ -658,7 +658,7 @@ Racine : $ROOT_ID
 ## Rappel
 
 Les SCP ne s'appliquent pas au compte de gestion.
-L'utilisateur IAM est dans le compte de gestion — la démonstration est conceptuelle.
+L'utilisateur IAM est dans le compte de gestion ; la démonstration est conceptuelle.
 EOF
 
 cat notes/gouvernance-organizations.md
@@ -701,15 +701,15 @@ aws iam get-policy-version \
 
 ### 13.1. Garde-fou CloudTrail
 
-La SCP `DenyCloudTrailDisable` protège la capacité d'audit. Elle évite qu'une identité dans un compte membre désactive ou supprime CloudTrail. Elle n'active pas CloudTrail — elle empêche uniquement certaines actions de le désactiver.
+La SCP `DenyCloudTrailDisable` protège la capacité d'audit. Elle évite qu'une identité dans un compte membre désactive ou supprime CloudTrail. Elle n'active pas CloudTrail ; elle empêche uniquement certaines actions de le désactiver.
 
 ### 13.2. Garde-fou régional
 
-La SCP `DenyOutsideEuWest1` utilise `Effect: Deny` avec `NotAction` et la condition `aws:RequestedRegion`. Elle bloque les actions hors eu-west-1, sauf pour les services listés dans `NotAction`. Cette liste est incomplète pour un usage réel — à compléter avant tout déploiement effectif.
+La SCP `DenyOutsideEuWest1` utilise `Effect: Deny` avec `NotAction` et la condition `aws:RequestedRegion`. Elle bloque les actions hors eu-west-1, sauf pour les services listés dans `NotAction`. Cette liste est incomplète pour un usage réel ; à compléter avant tout déploiement effectif.
 
 ### 13.3. Utilisateur IAM de démonstration
 
-La politique IAM attachée à `org-demo-operator` autorise certaines actions CloudTrail. IAM accorde des permissions locales au compte. Une SCP peut réduire le plafond maximal d'autorisations dans un compte membre — mais pas dans le compte de gestion.
+La politique IAM attachée à `org-demo-operator` autorise certaines actions CloudTrail. IAM accorde des permissions locales au compte. Une SCP peut réduire le plafond maximal d'autorisations dans un compte membre, mais pas dans le compte de gestion.
 
 ---
 
@@ -729,7 +729,7 @@ aws iam delete-user \
   --user-name "$UTILISATEUR_IAM_DEMO" \
   --profile "$PROFIL_AWS"
 
-# Vérification — doit retourner NoSuchEntity
+# Vérification : doit retourner NoSuchEntity
 aws iam get-user \
   --user-name "$UTILISATEUR_IAM_DEMO" \
   --profile "$PROFIL_AWS"
@@ -801,7 +801,7 @@ aws organizations delete-organizational-unit \
   --organizational-unit-id "$OU_WORKLOADS_ID" \
   --profile "$PROFIL_AWS"
 
-# Vérification — doit retourner une liste vide
+# Vérification : doit retourner une liste vide
 aws organizations list-organizational-units-for-parent \
   --parent-id "$ROOT_ID" \
   --profile "$PROFIL_AWS"
@@ -839,18 +839,18 @@ Empêche `cloudtrail:StopLogging`, `cloudtrail:DeleteTrail` et `cloudtrail:Updat
 
 ### 18.4. SCP régionale
 
-Illustre une restriction à `eu-west-1` avec exceptions pour les services globaux — liste à compléter avant tout usage réel.
+Illustre une restriction à `eu-west-1` avec exceptions pour les services globaux ; liste à compléter avant tout usage réel.
 
 ### 18.5. Utilisateur IAM de démonstration
 
-L'utilisateur `org-demo-operator` illustre que IAM accorde des permissions locales et que SCP pose des garde-fous organisationnels — mais que les SCP ne s'appliquent pas au compte de gestion.
+L'utilisateur `org-demo-operator` illustre que IAM accorde des permissions locales et que SCP pose des garde-fous organisationnels, mais que les SCP ne s'appliquent pas au compte de gestion.
 
 ### 18.6. Points de vigilance
 
 - Une SCP ne donne jamais de permission. Elle limite les permissions maximales disponibles.
 - Elle doit être testée progressivement et jamais attachée à un périmètre large sans évaluation de l'impact.
 - La création d'une organisation est quasi-irréversible : suppression nécessite 7 jours d'attente.
-- Les SCP ne s'appliquent pas au compte de gestion — règle fondamentale AWS.
+- Les SCP ne s'appliquent pas au compte de gestion, règle fondamentale AWS.
 
 ### 18.7. Synthèse
 
