@@ -150,6 +150,16 @@ a[aria-current='page']:hover {
 }
 
 /* ══════════════════════════════════════════
+   Titre de page généré par Starlight (hors .sl-markdown-content)
+   ══════════════════════════════════════════ */
+
+:root[data-theme='light'] .page-title,
+:root[data-theme='light'] article > header h1,
+:root[data-theme='light'] .content-panel > header h1 {
+  color: var(--sl-color-text) !important;
+}
+
+/* ══════════════════════════════════════════
    Titres — Playfair Display
    ══════════════════════════════════════════ */
 
