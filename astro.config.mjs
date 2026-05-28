@@ -21,6 +21,7 @@ export default defineConfig({
         {
           label: 'Cours',
           items: [
+            { label: 'Fondations du Cloud AWS', slug: 'cours/cloud-foundation' },
             { label: 'Sécurité AWS', slug: 'cours/securite-aws' },
           ],
         },
