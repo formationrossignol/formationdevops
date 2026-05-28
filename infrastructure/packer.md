@@ -214,9 +214,17 @@ packer {
   }
 }
 
-variable "aws_region"       { type = string; default = "eu-west-3" }
-variable "ami_name_prefix"  { type = string; default = "lamp-stack" }
-variable "app_version"      { type = string; default = "1.0.0" }
+variable "aws_region"       {
+    type = string
+    default = "eu-west-3"
+}
+variable "ami_name_prefix"  {
+    type = string
+    default = "lamp-stack"
+}
+variable "app_version"    { type = string
+    default = "1.0.0"
+}
 
 locals {
   timestamp = regex_replace(timestamp(), "[- TZ:]", "")
