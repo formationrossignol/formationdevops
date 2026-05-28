@@ -763,7 +763,7 @@ Section 7
 - Réputation : risque sur l'image en cas d'incident
 
 **Statistiques 2025 :**
-- Les entreprises utilisent en moyenne **1 295 applications cloud** (< 2% gérées par l'IT)
+- Les entreprises utilisent en moyenne **1 295 applications cloud** (moins de 2% gérées par l'IT)
 - 72% de l'usage GenAI en entreprise relève du Shadow IT
 - 38% des employés partagent des données confidentielles avec des IA sans approbation
 
@@ -1510,7 +1510,7 @@ Section 18 — AWS Certified Cloud Practitioner (CLF-C02)
 **Stratégie :**
 - Procéder par **élimination** (supprimer les réponses clairement fausses)
 - Pas d'overthinking — si une solution semble très compliquée, elle est probablement fausse
-- Lire l'**aperçu** de chaque service sur aws.amazon.com/fr/<service>/
+- Lire l'**aperçu** de chaque service sur `aws.amazon.com/fr/<nom-du-service>/`
 - **6 mois de pratique** recommandés avant l'examen
 
 ---
