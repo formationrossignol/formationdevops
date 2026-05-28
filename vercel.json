@@ -1,6 +1,6 @@
 {
-  "buildCommand": "npm run docs:build",
-  "outputDirectory": ".vitepress/dist",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "installCommand": "npm install",
-  "framework": null
+  "framework": "astro"
 }
