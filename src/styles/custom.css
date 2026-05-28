@@ -127,13 +127,20 @@ nav.sidebar {
 a[aria-current='page'] {
   font-weight: 600;
   color: var(--sl-color-accent) !important;
-  background: transparent;
+  background: transparent !important;
   border-left: none;
   box-shadow: none;
   border-radius: 0;
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, var(--sl-color-accent) 40%, transparent);
   text-underline-offset: 3px;
+}
+
+/* Hover sur lien actif — ne pas écraser le texte */
+a[aria-current='page']:hover {
+  background: transparent !important;
+  color: var(--sl-color-accent) !important;
+  opacity: 0.85;
 }
 
 /* ══════════════════════════════════════════
@@ -331,6 +338,47 @@ a[aria-current='page'] {
 
 .hero .action.secondary:hover {
   border-color: var(--sl-color-accent);
+  color: var(--sl-color-accent);
+}
+
+/* ══════════════════════════════════════════
+   Pagination précédent / suivant
+   ══════════════════════════════════════════ */
+
+.pagination-links {
+  border-top: 1px solid var(--sl-color-hairline-light);
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+}
+
+.pagination-links a {
+  border: 1px solid var(--sl-color-hairline-light);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  color: var(--sl-color-text) !important;
+  background: var(--sl-color-bg);
+  text-decoration: none !important;
+  transition: border-color 0.15s, background 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pagination-links a:hover {
+  border-color: var(--sl-color-accent);
+  background: color-mix(in srgb, var(--sl-color-accent) 6%, var(--sl-color-bg));
+  color: var(--sl-color-text) !important;
+}
+
+/* Label "Précédent" / "Suivant" */
+.pagination-links .link-title {
+  color: var(--sl-color-text);
+  font-weight: 600;
+}
+
+/* Flèche + titre de la page */
+[rel='prev'] .link-title::before,
+[rel='next'] .link-title::after {
   color: var(--sl-color-accent);
 }
 
