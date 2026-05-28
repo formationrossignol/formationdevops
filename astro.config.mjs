@@ -85,10 +85,8 @@ export default defineConfig({
       },
       customCss: ['./src/styles/custom.css'],
       head: [
-        {
-          tag: 'script',
-          attrs: { src: '/reading-progress.js', defer: true },
-        },
+        { tag: 'script', attrs: { src: '/reading-progress.js', defer: true } },
+        { tag: 'script', attrs: { src: '/enhancements.js', defer: true } },
       ],
     }),
   ],
