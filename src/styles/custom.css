@@ -136,6 +136,12 @@ a[aria-current='page'] {
   text-underline-offset: 3px;
 }
 
+/* Hover sidebar — forcer texte lisible en mode clair */
+:root[data-theme='light'] nav.sidebar a:hover,
+:root[data-theme='light'] .sidebar-content a:hover {
+  color: var(--sl-color-accent) !important;
+}
+
 /* Hover sur lien actif — ne pas écraser le texte */
 a[aria-current='page']:hover {
   background: transparent !important;

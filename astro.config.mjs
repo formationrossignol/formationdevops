@@ -23,6 +23,7 @@ export default defineConfig({
             { label: 'TP : IaC sécurisée avec Terraform, Checkov et Trivy', slug: 'securite-cloud/terraform-checkov-trivy' },
             { label: 'TP : Serverless sécurisé avec SAM, cfn-lint et Checkov', slug: 'securite-cloud/sam-cfn-lint-checkov' },
             { label: 'TP : Inventaire sécurité AWS avec Prowler', slug: 'securite-cloud/prowler' },
+            { label: 'TP : Cartographie sécurité AWS avec CloudFox', slug: 'securite-cloud/cloudfox' },
           ],
         },
         {
@@ -63,6 +64,12 @@ export default defineConfig({
           label: 'Messaging',
           items: [
             { label: 'TP : SQS Free Tier', slug: 'messaging/sqs' },
+          ],
+        },
+        {
+          label: 'FinOps',
+          items: [
+            { label: 'TP : Estimation FinOps avec Infracost', slug: 'finops/infracost' },
           ],
         },
       ],
