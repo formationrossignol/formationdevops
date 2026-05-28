@@ -87,6 +87,7 @@ export default defineConfig({
       ],
       lastUpdated: true,
       components: {
+        Head: './src/components/Head.astro',
         PageTitle: './src/components/PageTitle.astro',
         Footer: './src/components/Footer.astro',
       },
