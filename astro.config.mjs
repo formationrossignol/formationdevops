@@ -1,11 +1,9 @@
 import { defineConfig } from 'astro/config'
 import starlight from '@astrojs/starlight'
-import starlightThemeVintage from 'starlight-theme-vintage'
 
 export default defineConfig({
   integrations: [
     starlight({
-      plugins: [starlightThemeVintage()],
       title: 'Formation Terraform',
       social: [
         { icon: 'github', label: 'GitHub', href: 'https://github.com/formationrossignol' },
