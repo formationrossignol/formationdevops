@@ -1,5 +1,5 @@
 ---
-title: "TP 6 : Provider Kubernetes de Terraform"
+title: "TP 9 : Provider Kubernetes de Terraform"
 description: Déployer des ressources Kubernetes (namespace, secret, pod, deployment, service) avec Terraform.
 ---
 

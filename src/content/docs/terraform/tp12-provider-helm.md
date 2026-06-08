@@ -1,5 +1,5 @@
 ---
-title: "TP 4 : Provider Helm de Terraform"
+title: "TP 12 : Provider Helm de Terraform"
 description: Gérer des releases Helm avec le provider Terraform.
 ---
 

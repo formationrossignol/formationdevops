@@ -1,5 +1,5 @@
 ---
-title: "TP 8 : Les modules Terraform"
+title: "TP 4 : Les modules Terraform"
 description: Créer et utiliser des modules réutilisables dans Terraform.
 ---
 

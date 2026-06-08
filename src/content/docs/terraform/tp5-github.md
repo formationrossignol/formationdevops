@@ -1,5 +1,5 @@
 ---
-title: "TP 10 : Gérer un dépôt GitHub avec Terraform"
+title: "TP 5 : Gérer un dépôt GitHub avec Terraform"
 description: Créer et administrer un dépôt GitHub avec le provider Terraform.
 ---
 

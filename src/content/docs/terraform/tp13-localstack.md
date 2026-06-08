@@ -1,5 +1,5 @@
 ---
-title: "TP 7 : LocalStack"
+title: "TP 13 : LocalStack"
 description: Simuler des services AWS localement avec LocalStack et Terraform.
 ---
 

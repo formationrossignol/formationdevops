@@ -1,5 +1,5 @@
 ---
-title: "TP 2 : Utilisation générique de Helm"
+title: "TP 10 : Utilisation générique de Helm"
 description: Commandes Helm essentielles pour gérer des charts Kubernetes.
 ---
 

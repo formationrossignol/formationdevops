@@ -1,5 +1,5 @@
 ---
-title: "TP 3 : Utilisation de Helm"
+title: "TP 11 : Utilisation de Helm"
 description: Déployer, personnaliser et gérer des applications Kubernetes avec Helm.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "TP OpenTofu : déployer un conteneur Nginx en local"
+title: "TP 7 : OpenTofu - déployer un conteneur Nginx en local"
 description: Tester OpenTofu sur un cas simple d'Infrastructure as Code avec Docker.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "TP 1 : Utilisation de Kind (Kubernetes in Docker)"
+title: "TP 8 : Kind (Kubernetes in Docker)"
 description: Créer et gérer des clusters Kubernetes locaux avec Kind.
 ---
 
