@@ -85,6 +85,21 @@ export default defineConfig({
             { label: 'TP : Estimation FinOps avec Infracost', slug: 'finops/infracost' },
           ],
         },
+        {
+          label: 'Terraform',
+          items: [
+            { label: 'TP 0 : Mise en place de l\'environnement', slug: 'terraform/tp0-mise-en-place' },
+            { label: 'TP 1 : Kind (Kubernetes in Docker)', slug: 'terraform/tp1-kind' },
+            { label: 'TP 2 : Utilisation générique de Helm', slug: 'terraform/tp2-helm-generique' },
+            { label: 'TP 3 : Utilisation de Helm', slug: 'terraform/tp3-helm' },
+            { label: 'TP 4 : Provider Helm de Terraform', slug: 'terraform/tp4-provider-helm' },
+            { label: 'TP 5 : Provider Docker de Terraform', slug: 'terraform/tp5-provider-docker' },
+            { label: 'TP 6 : Provider Kubernetes de Terraform', slug: 'terraform/tp6-provider-kubernetes' },
+            { label: 'TP 7 : LocalStack', slug: 'terraform/tp7-localstack' },
+            { label: 'TP 8 : Les modules', slug: 'terraform/tp8-modules' },
+            { label: 'TP 9 : Intégration de HashiCorp Vault', slug: 'terraform/tp9-vault' },
+          ],
+        },
       ],
       lastUpdated: true,
       components: {
