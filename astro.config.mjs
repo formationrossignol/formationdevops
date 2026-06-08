@@ -34,6 +34,7 @@ export default defineConfig({
             { label: 'TP 10 : Gérer un dépôt GitHub', slug: 'terraform/tp10-github' },
             { label: 'TP : Plusieurs conteneurs avec count', slug: 'terraform/tp-count' },
             { label: 'TP : Plusieurs conteneurs avec for_each', slug: 'terraform/tp-foreach' },
+            { label: 'TP OpenTofu : Nginx en local', slug: 'terraform/tp-opentofu' },
           ],
         },
       ],
