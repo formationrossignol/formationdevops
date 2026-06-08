@@ -79,10 +79,12 @@ resource "docker_network" "custom_network" {
 
 Connectez le conteneur au réseau :
 
+> **Note** : `.latest` est déprécié depuis la v3 du provider `kreuzwerker/docker`. Utiliser `.image_id`.
+
 ```hcl
 resource "docker_container" "nginx_container" {
   name  = "nginx-container"
-  image = docker_image.nginx_image.latest
+  image = docker_image.nginx_image.image_id
 
   ports {
     internal = 80
@@ -116,7 +118,7 @@ Montez le volume dans le conteneur :
 ```hcl
 resource "docker_container" "nginx_container" {
   name  = "nginx-container"
-  image = docker_image.nginx_image.latest
+  image = docker_image.nginx_image.image_id
 
   ports {
     internal = 80
@@ -139,7 +141,7 @@ Pour Windows :
 ```hcl
 resource "docker_container" "nginx_container" {
   name  = "nginx-container"
-  image = docker_image.nginx_image.latest
+  image = docker_image.nginx_image.image_id
 
   ports {
     internal = 80

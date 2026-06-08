@@ -3,22 +3,7 @@ title: "TP 9 : Intégration de HashiCorp Vault avec Terraform"
 description: Stocker et récupérer des secrets Vault depuis Terraform avec LocalStack.
 ---
 
-```mermaid
-graph TD;
-    A[Start] -->|Run Vault| B[Vault Server];
-    A -->|Run LocalStack| C[LocalStack];
-    B -->|Expose API| D[Vault API];
-    C -->|Simulate AWS| E[LocalStack AWS Services];
-    D -->|Store Secret| F[Vault KV Engine];
-    F -->|Retrieve Secret| G[Vault API];
-    G -->|Provide to Terraform| H[Terraform Provider];
-    H -->|Deploy Instance| I[AWS EC2 Instance via LocalStack];
-    I -->|Instance Running| J[Deployment Complete];
-    J -->|Cleanup| K[Destroy Resources];
-    K -->|Stop Vault| L[Vault Server Stopped];
-    K -->|Stop LocalStack| M[LocalStack Stopped];
-    K -->|Remove Files| N[Deleted Terraform Files];
-```
+> **Flux d'exécution** : Vault expose une API de secrets KV -> Terraform interroge Vault via le provider -> les valeurs récupérées sont injectées dans les ressources AWS déployées sur LocalStack -> les ressources sont détruites en fin de TP.
 
 ## Lancer Vault et LocalStack en local
 
@@ -42,9 +27,20 @@ $env:VAULT_ADDR="http://127.0.0.1:8200"
 
 Activer Vault en mode développement :
 
+> **Conseil** : En mode `-dev`, Vault démarre avec un token root `root` et un backend en mémoire -- les données sont perdues a l'arret. Ce mode est uniquement pour le développement et les TP. La commande bloque le terminal : lancer en arrière-plan.
+
+Sur Windows (PowerShell) :
+
 ```powershell
-vault server -dev
+Start-Process -NoNewWindow vault -ArgumentList "server -dev"
 $env:VAULT_TOKEN="root"
+```
+
+Sur Linux/macOS :
+
+```bash
+vault server -dev &
+export VAULT_TOKEN="root"
 ```
 
 ## Stocker un secret dans Vault
@@ -83,10 +79,16 @@ provider "vault" {
 }
 
 provider "aws" {
-  access_key = "test"
-  secret_key = "test"
-  region     = "us-east-1"
-  endpoint   = "http://localhost:4566"
+  access_key                  = "test"
+  secret_key                  = "test"
+  region                      = "us-east-1"
+  skip_credentials_validation = true
+  skip_metadata_api_check     = true
+  skip_requesting_account_id  = true
+
+  endpoints {
+    ec2 = "http://localhost:4566"
+  }
 }
 
 data "vault_kv_secret_v2" "example" {

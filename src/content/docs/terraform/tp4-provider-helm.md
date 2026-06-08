@@ -47,13 +47,15 @@ provider "helm" {
 
 Ajoutez une ressource pour déployer un chart Helm (Nginx depuis Bitnami) :
 
+> **Note** : Quand `repository` est une URL, `chart` doit être le nom court (`nginx`) et non le chemin qualifié (`bitnami/nginx`). Le champ `wait` est un booléen, pas une chaîne.
+
 ```hcl
 resource "helm_release" "nginx" {
   name       = "nginx-release"
-  repository = "bitnami"
-  chart      = "bitnami/nginx"
+  repository = "https://charts.bitnami.com/bitnami"
+  chart      = "nginx"
   version    = "18.3.5"
-  wait       = "false"
+  wait       = false
 
   set {
     name  = "replicaCount"
@@ -122,12 +124,11 @@ Modifiez la ressource `helm_release` :
 ```hcl
 resource "helm_release" "nginx" {
   name       = "nginx-release"
-  chart      = "bitnami/nginx"
+  chart      = "nginx"
   namespace  = "default"
   repository = "https://charts.bitnami.com/bitnami"
-  version    = "15.1.0"
-
-  values = [file("values.yaml")]
+  version    = "18.3.5"
+  values     = [file("values.yaml")]
 }
 ```
 
