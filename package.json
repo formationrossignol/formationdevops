@@ -4,11 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run build:slides && astro build",
-    "build:slides": "slidev build slides/securite-aws.md --out $(pwd)/public/slides/securite-aws --base /slides/securite-aws/ && slidev build slides/cloud-foundation.md --out $(pwd)/public/slides/cloud-foundation --base /slides/cloud-foundation/",
-    "preview": "astro preview",
-    "slides:dev": "slidev slides/securite-aws.md",
-    "slides:dev:cloud": "slidev slides/cloud-foundation.md"
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.32.0",
@@ -16,8 +13,5 @@
     "astro": "^5.0.0",
     "sharp": "^0.33.0"
   },
-  "devDependencies": {
-    "@slidev/cli": "^52.15.2",
-    "@slidev/theme-default": "^0.25.0"
-  }
+  "devDependencies": {}
 }
