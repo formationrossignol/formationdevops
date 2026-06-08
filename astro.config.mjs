@@ -35,6 +35,7 @@ export default defineConfig({
             { label: 'TP : Plusieurs conteneurs avec count', slug: 'terraform/tp-count' },
             { label: 'TP : Plusieurs conteneurs avec for_each', slug: 'terraform/tp-foreach' },
             { label: 'TP OpenTofu : Nginx en local', slug: 'terraform/tp-opentofu' },
+            { label: 'TP : Gérer un projet GitLab', slug: 'terraform/tp-gitlab' },
           ],
         },
       ],
