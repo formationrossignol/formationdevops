@@ -32,6 +32,8 @@ export default defineConfig({
             { label: 'TP 8 : Les modules', slug: 'terraform/tp8-modules' },
             { label: 'TP 9 : Intégration de HashiCorp Vault', slug: 'terraform/tp9-vault' },
             { label: 'TP 10 : Gérer un dépôt GitHub', slug: 'terraform/tp10-github' },
+            { label: 'TP : Plusieurs conteneurs avec count', slug: 'terraform/tp-count' },
+            { label: 'TP : Plusieurs conteneurs avec for_each', slug: 'terraform/tp-foreach' },
           ],
         },
       ],
