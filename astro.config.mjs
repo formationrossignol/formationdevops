@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight'
 export default defineConfig({
   integrations: [
     starlight({
-      title: 'Formation AWS',
+      title: 'Formation Terraform',
       social: {
         github: 'https://github.com/formationrossignol',
         linkedin: 'https://www.linkedin.com/in/loicrossignol/',
