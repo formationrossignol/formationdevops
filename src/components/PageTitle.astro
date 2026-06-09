@@ -8,7 +8,38 @@ function formatDate(d: Date) {
 
 const updatedDate = lastUpdated instanceof Date ? lastUpdated : undefined;
 const isSplash = template === 'splash';
+
+// Reading time (~200 words/min for technical content)
+const rawBody: string = (entry as any).body ?? '';
+const wordCount = rawBody.trim().split(/\s+/).filter((w: string) => w.length > 0).length;
+const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+
+// Breadcrumb from entry id/slug
+const rawId: string = ((entry as any).id ?? (entry as any).slug ?? '').replace(/\.mdx?$/, '');
+const segments = rawId.split('/').filter(Boolean);
+
+const SECTION_LABELS: Record<string, string> = {
+  terraform: 'Terraform',
+};
+
+const crumbs = segments.length > 1
+  ? segments.slice(0, -1).map((s: string) => SECTION_LABELS[s] ?? (s.charAt(0).toUpperCase() + s.slice(1)))
+  : [];
 ---
+
+{!isSplash && crumbs.length > 0 && (
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="/">Accueil</a>
+    {crumbs.map((label: string) => (
+      <>
+        <span class="sep" aria-hidden="true">›</span>
+        <span>{label}</span>
+      </>
+    ))}
+    <span class="sep" aria-hidden="true">›</span>
+    <span class="current" aria-current="page">{title}</span>
+  </nav>
+)}
 
 <h1 id="_top">{title}</h1>
 
@@ -25,12 +56,45 @@ const isSplash = template === 'splash';
         Mis à jour le {formatDate(updatedDate)}
       </time>
     )}
+    <span class="meta-item">{readingTime} min de lecture</span>
   </div>
 )}
 
 <style>
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    font-size: var(--sl-text-xs);
+    color: var(--sl-color-gray-4);
+    margin-bottom: 0.75rem;
+  }
+  .breadcrumb a {
+    color: var(--sl-color-gray-4);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover {
+    color: var(--sl-color-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .breadcrumb .sep {
+    color: var(--sl-color-gray-5);
+    font-size: 0.7rem;
+    margin: 0 0.1rem;
+  }
+  .breadcrumb .current {
+    color: var(--sl-color-gray-3);
+    font-weight: 500;
+    max-width: 35ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   h1 {
-    margin-top: 1rem;
+    margin-top: 0.25rem;
     font-size: var(--sl-text-h1);
     line-height: var(--sl-line-height-headings);
     font-weight: 600;
