@@ -1,5 +1,5 @@
 ---
-title: "TP 16 : Utilisation générique de Helm"
+title: "TP 17 : Utilisation générique de Helm"
 description: Commandes Helm essentielles pour gérer des charts Kubernetes.
 ---
 

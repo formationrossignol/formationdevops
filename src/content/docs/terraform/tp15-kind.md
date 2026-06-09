@@ -1,5 +1,5 @@
 ---
-title: "TP 14 : Kind (Kubernetes in Docker)"
+title: "TP 15 : Kind (Kubernetes in Docker)"
 description: Créer et gérer des clusters Kubernetes locaux avec Kind.
 ---
 

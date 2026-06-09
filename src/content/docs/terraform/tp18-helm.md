@@ -1,5 +1,5 @@
 ---
-title: "TP 17 : Utilisation de Helm"
+title: "TP 18 : Utilisation de Helm"
 description: Déployer, personnaliser et gérer des applications Kubernetes avec Helm.
 ---
 

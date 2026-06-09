@@ -1,5 +1,5 @@
 ---
-title: "TP 19 : LocalStack"
+title: "TP 20 : LocalStack"
 description: Simuler des services AWS localement avec LocalStack et Terraform.
 ---
 
