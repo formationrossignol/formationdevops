@@ -38,6 +38,7 @@ export default defineConfig({
             { label: 'TP 14 : Intégration de HashiCorp Vault', slug: 'terraform/tp14-vault' },
             { label: 'TP : Utiliser les outputs', slug: 'terraform/tp-outputs' },
             { label: 'TP : Sécurité IaC avec Trivy', slug: 'terraform/tp-trivy' },
+            { label: 'TP : Tester un module avec terraform test', slug: 'terraform/tp-test' },
             { label: 'TP : Workspaces multi-environnements', slug: 'terraform/tp-workspaces' },
           ],
         },
