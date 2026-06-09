@@ -7,7 +7,7 @@ description: Installation des outils nécessaires pour la formation Terraform.
 
 ## Gestionnaire de paquets
 
-### Windows — Chocolatey
+### Windows : Chocolatey
 
 Ouvrir PowerShell en mode administrateur, puis exécuter :
 
@@ -21,7 +21,7 @@ Vérifier :
 choco --version
 ```
 
-### macOS — Homebrew
+### macOS : Homebrew
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

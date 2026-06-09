@@ -1,5 +1,5 @@
 ---
-title: "TP Terraform : gérer plusieurs environnements avec les workspaces"
+title: "TP 7 : Workspaces multi-environnements"
 description: Utiliser les workspaces Terraform pour gérer dev, test et prod à partir du même code.
 ---
 

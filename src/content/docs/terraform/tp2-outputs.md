@@ -1,5 +1,5 @@
 ---
-title: "TP Terraform : utiliser les outputs"
+title: "TP 2 : Utiliser les outputs"
 description: Récupérer et utiliser des informations après un déploiement Terraform avec les outputs.
 ---
 
@@ -15,7 +15,7 @@ Ce TP permet de voir comment afficher :
 - une information calculée à partir de variables
 - un output sensible masqué
 
-**Niveau** : Débutant — **Environnement** : Docker local
+**Niveau** : Débutant : **Environnement** : Docker local
 
 ## Prérequis
 

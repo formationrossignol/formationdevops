@@ -186,7 +186,7 @@ Afficher le détail du conteneur :
 terraform state show docker_container.web
 ```
 
-## Étape 5 : première dérive — arrêter le conteneur manuellement
+## Étape 5 : première dérive : arrêter le conteneur manuellement
 
 Arrêter le conteneur sans passer par Terraform :
 
@@ -194,7 +194,7 @@ Arrêter le conteneur sans passer par Terraform :
 docker stop tp-drift-nginx
 ```
 
-Vérifier — le conteneur est arrêté mais existe toujours :
+Vérifier : le conteneur est arrêté mais existe toujours :
 
 ```bash
 docker ps      # conteneur absent
@@ -207,7 +207,7 @@ Puis lancer :
 terraform plan
 ```
 
-> **Comportement attendu** : le provider `kreuzwerker/docker` ne suit pas l'état running/stopped d'un conteneur — uniquement son existence. Terraform peut donc afficher `No changes` même si le conteneur est arrêté. C'est une limite du provider Docker, pas un bug Terraform.
+> **Comportement attendu** : le provider `kreuzwerker/docker` ne suit pas l'état running/stopped d'un conteneur : uniquement son existence. Terraform peut donc afficher `No changes` même si le conteneur est arrêté. C'est une limite du provider Docker, pas un bug Terraform.
 >
 > C'est un exemple de ce que Terraform **ne détecte pas forcément** : un arrêt manuel n'est pas une dérive visible dans le state si le provider ne modélise pas cet attribut.
 
@@ -218,7 +218,7 @@ docker rm tp-drift-nginx
 terraform apply
 ```
 
-## Étape 6 : deuxième dérive — supprimer le conteneur manuellement
+## Étape 6 : deuxième dérive : supprimer le conteneur manuellement
 
 Supprimer le conteneur hors Terraform :
 
@@ -246,9 +246,9 @@ Vérifier :
 docker ps
 ```
 
-> C'est la dérive la plus simple et la plus courante : une ressource supprimée hors Terraform. Le state indique qu'elle existe, l'état réel dit qu'elle n'existe pas — Terraform la recrée.
+> C'est la dérive la plus simple et la plus courante : une ressource supprimée hors Terraform. Le state indique qu'elle existe, l'état réel dit qu'elle n'existe pas : Terraform la recrée.
 
-## Étape 7 : troisième dérive — remplacer le conteneur par un autre
+## Étape 7 : troisième dérive : remplacer le conteneur par un autre
 
 Supprimer le conteneur Terraform :
 
@@ -270,7 +270,7 @@ terraform plan
 
 Terraform compare son state (qui décrit un conteneur `nginx:latest`) avec ce qui existe réellement (un conteneur `httpd:latest`). Il doit proposer un remplacement ou une modification.
 
-> **Attention lors de l'`apply`** : Terraform va tenter de supprimer le conteneur existant avant d'en créer un nouveau. S'il ne parvient pas à supprimer le conteneur manuel (permissions, etc.), l'`apply` échouera. Le comportement est normal — Terraform reprend le contrôle de la ressource.
+> **Attention lors de l'`apply`** : Terraform va tenter de supprimer le conteneur existant avant d'en créer un nouveau. S'il ne parvient pas à supprimer le conteneur manuel (permissions, etc.), l'`apply` échouera. Le comportement est normal : Terraform reprend le contrôle de la ressource.
 
 Appliquer pour rétablir l'état attendu :
 
@@ -292,7 +292,7 @@ Puis lancer :
 terraform plan
 ```
 
-Terraform ne propose pas de supprimer `manuel-nginx` — ce conteneur n'est pas dans son state, il ne le connaît pas.
+Terraform ne propose pas de supprimer `manuel-nginx` : ce conteneur n'est pas dans son state, il ne le connaît pas.
 
 > **Point important** : Terraform ne gère que les ressources enregistrées dans son state. Une ressource créée hors Terraform est invisible pour lui. Pour qu'il commence à la gérer, il faudrait utiliser `terraform import`.
 
@@ -328,14 +328,14 @@ Selon la situation, plusieurs approches sont possibles :
 |---|---|
 | L'état réel a été modifié par erreur | `terraform apply` pour rétablir l'état décrit dans le code |
 | L'état réel est désormais correct et le code doit s'y conformer | Modifier le code Terraform pour correspondre à la réalité, puis `terraform apply -refresh-only` |
-| La ressource ne doit plus être gérée par Terraform (sans la supprimer) | `terraform state rm <ressource>` — supprime la ressource du state uniquement, **pas de l'infrastructure** |
+| La ressource ne doit plus être gérée par Terraform (sans la supprimer) | `terraform state rm <ressource>` : supprime la ressource du state uniquement, **pas de l'infrastructure** |
 | Une ressource existante doit être prise en charge par Terraform | `terraform import <ressource> <id>` |
 
 > `terraform state rm` retire une ressource du state Terraform sans la détruire dans l'infrastructure. Après cette commande, Terraform ne la gère plus. À utiliser avec précaution car un `terraform apply` ultérieur pourrait tenter de recréer la ressource.
 
 ## Exercice 1 : dérive sur le port
 
-Provoquer une dérive de port sans modifier `variables.tf` — utiliser `-var` :
+Provoquer une dérive de port sans modifier `variables.tf` : utiliser `-var` :
 
 ```bash
 terraform plan -var="external_port=8081"
@@ -364,7 +364,7 @@ terraform plan -var="image_name=httpd:latest"
 terraform apply -var="image_name=httpd:latest"
 ```
 
-Observer comment Terraform traite le changement d'image — destruction et recréation du conteneur, ou modification en place ?
+Observer comment Terraform traite le changement d'image : destruction et recréation du conteneur, ou modification en place ?
 
 Rétablir l'image initiale :
 

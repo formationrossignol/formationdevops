@@ -206,7 +206,7 @@ terraform fmt
 terraform validate
 ```
 
-> `terraform plan` nécessite des credentials AWS valides pour s'exécuter complètement, même avec `skip_credentials_validation = true`. Pour ce TP, Infracost analyse directement les fichiers HCL sans passer par un plan Terraform — ce qui est suffisant et évite tout besoin de compte AWS.
+> `terraform plan` nécessite des credentials AWS valides pour s'exécuter complètement, même avec `skip_credentials_validation = true`. Pour ce TP, Infracost analyse directement les fichiers HCL sans passer par un plan Terraform : ce qui est suffisant et évite tout besoin de compte AWS.
 
 ## Étape 3 : estimer le coût depuis le dossier Terraform
 
@@ -232,7 +232,7 @@ infracost breakdown --path . --terraform-var-file prod.tfvars
 
 Observer la différence de coût entre `t3.micro` et `t3.large`.
 
-> Ne pas modifier la valeur `default` dans `variables.tf` pour changer le type d'instance — utiliser `--terraform-var-file` ou `--terraform-var instance_type=t3.large` directement dans la commande Infracost.
+> Ne pas modifier la valeur `default` dans `variables.tf` pour changer le type d'instance : utiliser `--terraform-var-file` ou `--terraform-var instance_type=t3.large` directement dans la commande Infracost.
 
 ## Étape 5 : générer un rapport JSON
 
@@ -263,11 +263,11 @@ infracost diff \
   --compare-to infracost-dev.json
 ```
 
-`infracost diff` est la commande conçue pour comparer deux estimations — elle affiche les ressources ajoutées, modifiées ou supprimées ainsi que la variation de coût globale, ce qui est plus lisible qu'une comparaison manuelle de deux tableaux.
+`infracost diff` est la commande conçue pour comparer deux estimations : elle affiche les ressources ajoutées, modifiées ou supprimées ainsi que la variation de coût globale, ce qui est plus lisible qu'une comparaison manuelle de deux tableaux.
 
 ## Étape 7 : générer un plan Terraform JSON et l'analyser
 
-> Cette étape nécessite des credentials AWS valides pour que `terraform plan` s'exécute. Si vous n'avez pas de compte AWS, utiliser directement `infracost breakdown --path .` comme aux étapes précédentes — le résultat est équivalent pour l'estimation.
+> Cette étape nécessite des credentials AWS valides pour que `terraform plan` s'exécute. Si vous n'avez pas de compte AWS, utiliser directement `infracost breakdown --path .` comme aux étapes précédentes : le résultat est équivalent pour l'estimation.
 
 Avec des credentials AWS configurés :
 
@@ -296,7 +296,7 @@ resource "aws_ebs_volume" "data" {
 }
 ```
 
-> Le volume EBS est déclaré sans être attaché à l'instance — c'est intentionnel pour cet exercice. L'objectif est uniquement d'observer l'impact sur l'estimation de coût. Infracost estime les ressources indépendamment de leur attachement.
+> Le volume EBS est déclaré sans être attaché à l'instance : c'est intentionnel pour cet exercice. L'objectif est uniquement d'observer l'impact sur l'estimation de coût. Infracost estime les ressources indépendamment de leur attachement.
 
 Relancer :
 
@@ -382,7 +382,7 @@ infracost:
     expire_in: 7 days
 ```
 
-> L'image `infracost/infracost:0.10` est épinglée sur une version majeure stable. Éviter `latest` en CI/CD — le comportement peut changer lors d'une mise à jour sans avertissement. Vérifier la dernière version sur [hub.docker.com/r/infracost/infracost](https://hub.docker.com/r/infracost/infracost/tags).
+> L'image `infracost/infracost:0.10` est épinglée sur une version majeure stable. Éviter `latest` en CI/CD : le comportement peut changer lors d'une mise à jour sans avertissement. Vérifier la dernière version sur [hub.docker.com/r/infracost/infracost](https://hub.docker.com/r/infracost/infracost/tags).
 
 ## Variante GitHub Actions
 

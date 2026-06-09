@@ -1,5 +1,5 @@
 ---
-title: "TP 14 : Intégration de HashiCorp Vault avec Terraform"
+title: "TP 20 : Intégration de HashiCorp Vault"
 description: Stocker et récupérer des secrets Vault depuis Terraform avec LocalStack.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "TP Terraform : tester un module avec terraform test"
+title: "TP 6 : Tester un module avec terraform test"
 description: Créer un module Terraform et écrire des tests automatisés avec terraform test.
 ---
 

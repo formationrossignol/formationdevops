@@ -1,5 +1,5 @@
 ---
-title: "TP Terraform : sécurité IaC avec Trivy"
+title: "TP 11 : Sécurité IaC avec Trivy"
 description: Scanner du code Terraform pour détecter des problèmes de sécurité avant le déploiement.
 ---
 
