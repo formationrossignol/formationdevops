@@ -36,6 +36,7 @@ export default defineConfig({
             { label: 'TP 12 : Provider Helm de Terraform', slug: 'terraform/tp12-provider-helm' },
             { label: 'TP 13 : LocalStack', slug: 'terraform/tp13-localstack' },
             { label: 'TP 14 : Intégration de HashiCorp Vault', slug: 'terraform/tp14-vault' },
+            { label: 'TP : Utiliser les outputs', slug: 'terraform/tp-outputs' },
             { label: 'TP : Workspaces multi-environnements', slug: 'terraform/tp-workspaces' },
           ],
         },
