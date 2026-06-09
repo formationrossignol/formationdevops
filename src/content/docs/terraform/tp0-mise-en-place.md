@@ -171,6 +171,35 @@ Vérifier :
 helm version
 ```
 
+## Terragrunt
+
+Terragrunt est utilisé pour orchestrer des projets Terraform/OpenTofu (TP 14).
+
+### Windows
+
+```powershell
+choco install terragrunt
+```
+
+### macOS
+
+```bash
+brew install terragrunt
+```
+
+### Linux
+
+```bash
+curl -Lo /usr/local/bin/terragrunt https://github.com/gruntwork-io/terragrunt/releases/latest/download/terragrunt_linux_amd64
+chmod +x /usr/local/bin/terragrunt
+```
+
+Vérifier :
+
+```bash
+terragrunt --version
+```
+
 ## k9s
 
 ### Windows
@@ -292,6 +321,7 @@ jq --version
 ```powershell
 terraform version
 tofu version
+terragrunt --version
 docker version
 kubectl version --client
 kind version
@@ -307,6 +337,7 @@ jq --version
 ```bash
 terraform version
 tofu version
+terragrunt --version
 docker version
 kubectl version --client
 kind version
