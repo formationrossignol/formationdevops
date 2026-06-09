@@ -9,6 +9,16 @@ Créer plusieurs conteneurs Docker à partir d'une map Terraform avec `for_each`
 
 Cette méthode est plus adaptée que `count` lorsque chaque ressource a une configuration différente, car Terraform identifie chaque ressource par une **clé nommée** et non par un index numérique. Ajouter ou supprimer un élément n'affecte pas les autres ressources.
 
+## Prérequis
+
+- Terraform installé
+- Docker installé et lancé
+
+```bash
+terraform version
+docker version
+```
+
 ## Arborescence
 
 ```

@@ -189,7 +189,7 @@ a[aria-current='page']:hover {
   border-top: 1px solid var(--sl-color-hairline-light);
 }
 
-.sl-markdown-content > h2:first-child {
+.sl-markdown-content .sl-heading-wrapper:first-of-type h2 {
   border-top: none;
   padding-top: 0;
   margin-top: 0;

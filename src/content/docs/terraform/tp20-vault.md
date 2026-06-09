@@ -3,7 +3,33 @@ title: "TP 20 : Intégration de HashiCorp Vault"
 description: Stocker et récupérer des secrets Vault depuis Terraform avec LocalStack.
 ---
 
+## Objectif
+
+Stocker des secrets dans HashiCorp Vault et les récupérer depuis Terraform pour les injecter dans des ressources AWS simulées avec LocalStack.
+
+Ce TP permet de voir comment :
+
+- lancer Vault et LocalStack avec Docker
+- stocker un secret dans Vault via le moteur KV
+- configurer le provider `vault` dans Terraform
+- lire un secret Vault depuis une ressource `data`
+- injecter le secret dans une ressource AWS (LocalStack)
+
 > **Flux d'exécution** : Vault expose une API de secrets KV -> Terraform interroge Vault via le provider -> les valeurs récupérées sont injectées dans les ressources AWS déployées sur LocalStack -> les ressources sont détruites en fin de TP.
+
+## Prérequis
+
+- Terraform installé
+- Docker installé et lancé
+- Vault CLI installé
+- AWS CLI installé
+
+```bash
+terraform version
+docker version
+vault version
+aws --version
+```
 
 ## Lancer Vault et LocalStack en local
 
