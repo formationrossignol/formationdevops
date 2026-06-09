@@ -1,9 +1,22 @@
 ---
-title: "TP 11 : Utilisation de Helm"
+title: "TP 17 : Utilisation de Helm"
 description: Déployer, personnaliser et gérer des applications Kubernetes avec Helm.
 ---
 
-## Pré-requis
+## Objectif
+
+Déployer, personnaliser et gérer des applications Kubernetes avec Helm.
+
+Ce TP permet de voir comment :
+
+- configurer Helm avec un cluster Kubernetes
+- installer un chart Helm depuis un dépôt
+- personnaliser une installation avec un fichier `values.yaml`
+- mettre à jour une release
+- effectuer un rollback vers une version précédente
+- supprimer une release
+
+## Prérequis
 
 - **Cluster Kubernetes fonctionnel** : Utilisez Minikube, Kind, ou un cluster réel.
 - **Helm installé** : Installation de Helm.

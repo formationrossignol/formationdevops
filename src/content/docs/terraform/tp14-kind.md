@@ -1,7 +1,32 @@
 ---
-title: "TP 8 : Kind (Kubernetes in Docker)"
+title: "TP 14 : Kind (Kubernetes in Docker)"
 description: Créer et gérer des clusters Kubernetes locaux avec Kind.
 ---
+
+## Objectif
+
+Créer et gérer des clusters Kubernetes locaux avec Kind (Kubernetes in Docker).
+
+Ce TP permet de voir comment :
+
+- créer un cluster Kind simple
+- créer un cluster multi-nœuds avec un fichier de configuration
+- lister et inspecter les clusters existants
+- supprimer un cluster
+
+Kind crée des clusters Kubernetes en utilisant des conteneurs Docker comme nœuds. C'est la solution recommandée pour tester Kubernetes en local avant les TPs suivants.
+
+## Prérequis
+
+- Docker installé et lancé
+- Kind installé
+- kubectl installé
+
+```bash
+kind version
+docker version
+kubectl version --client
+```
 
 ## Créer un cluster
 

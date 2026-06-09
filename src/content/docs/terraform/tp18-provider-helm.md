@@ -1,7 +1,32 @@
 ---
-title: "TP 12 : Provider Helm de Terraform"
+title: "TP 18 : Provider Helm de Terraform"
 description: Gérer des releases Helm avec le provider Terraform.
 ---
+
+## Objectif
+
+Gérer des releases Helm avec le provider Terraform `hashicorp/helm`.
+
+Ce TP permet de voir comment :
+
+- configurer les providers Helm et Kubernetes dans Terraform
+- déployer un chart Helm via une ressource `helm_release`
+- modifier les paramètres d'une release avec `set`
+- utiliser un fichier `values.yaml` depuis Terraform
+- détruire une release via `terraform destroy`
+
+## Prérequis
+
+- Terraform installé
+- Helm installé
+- Un cluster Kubernetes fonctionnel (Kind — voir TP 14)
+- kubectl installé et configuré
+
+```bash
+terraform version
+helm version
+kubectl cluster-info
+```
 
 ## Préparer l'environnement
 

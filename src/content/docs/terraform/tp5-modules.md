@@ -1,7 +1,28 @@
 ---
-title: "TP 4 : Les modules Terraform"
+title: "TP 5 : Les modules Terraform"
 description: Créer et utiliser des modules réutilisables dans Terraform.
 ---
+
+## Objectif
+
+Créer et utiliser des modules Terraform réutilisables.
+
+Ce TP permet de voir comment :
+
+- structurer un projet Terraform avec des modules
+- définir les fichiers `main.tf`, `variables.tf` et `outputs.tf` d'un module
+- appeler un module depuis un projet parent
+- passer des variables et récupérer des outputs de module
+
+## Prérequis
+
+- Terraform installé
+- LocalStack installé et lancé (pour simuler AWS localement)
+
+```bash
+terraform version
+docker run --rm -p 4566:4566 localstack/localstack &
+```
 
 ## Création d'un module Terraform
 

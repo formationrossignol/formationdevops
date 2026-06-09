@@ -1,7 +1,32 @@
 ---
-title: "TP 9 : Provider Kubernetes de Terraform"
+title: "TP 15 : Provider Kubernetes de Terraform"
 description: Déployer des ressources Kubernetes (namespace, secret, pod, deployment, service) avec Terraform.
 ---
+
+## Objectif
+
+Déployer des ressources Kubernetes avec le provider Terraform `hashicorp/kubernetes`.
+
+Ce TP permet de voir comment :
+
+- configurer le provider Kubernetes dans Terraform
+- créer un namespace
+- créer un secret Kubernetes
+- déployer un pod
+- créer un deployment avec plusieurs réplicas
+- exposer un déploiement avec un service NodePort
+
+## Prérequis
+
+- Terraform installé
+- Un cluster Kubernetes fonctionnel (Kind — voir TP 14)
+- kubectl installé et configuré
+
+```bash
+terraform version
+kubectl version --client
+kubectl cluster-info
+```
 
 ## Préparer l'environnement Terraform
 

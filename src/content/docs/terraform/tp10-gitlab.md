@@ -1,5 +1,5 @@
 ---
-title: "TP 6 : Gérer un projet GitLab avec Terraform"
+title: "TP 10 : Gérer un projet GitLab avec Terraform"
 description: Créer et gérer des ressources GitLab avec Terraform - projets, labels, variables CI/CD.
 ---
 

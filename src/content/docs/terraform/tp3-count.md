@@ -1,5 +1,5 @@
 ---
-title: "TP 2 : Plusieurs conteneurs avec count"
+title: "TP 3 : Plusieurs conteneurs avec count"
 description: Créer plusieurs conteneurs Docker identiques avec Terraform en utilisant count.
 ---
 

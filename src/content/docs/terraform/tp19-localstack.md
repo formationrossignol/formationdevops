@@ -1,7 +1,33 @@
 ---
-title: "TP 13 : LocalStack"
+title: "TP 19 : LocalStack"
 description: Simuler des services AWS localement avec LocalStack et Terraform.
 ---
+
+## Objectif
+
+Simuler des services AWS localement avec LocalStack et Terraform.
+
+Ce TP permet de voir comment :
+
+- lancer LocalStack avec Docker
+- configurer le provider AWS pour pointer vers LocalStack
+- déployer des ressources EC2, S3, DynamoDB et SQS en local
+- interagir avec les services via l'AWS CLI
+- détruire l'infrastructure locale
+
+LocalStack émule l'API AWS localement, sans compte AWS ni frais. Il est utilisé pour tester des configurations Terraform cloud avant tout déploiement réel.
+
+## Prérequis
+
+- Terraform installé
+- Docker installé et lancé
+- AWS CLI installé
+
+```bash
+terraform version
+docker version
+aws --version
+```
 
 ## Construire l'environnement
 

@@ -1,7 +1,31 @@
 ---
-title: "TP 10 : Utilisation générique de Helm"
+title: "TP 16 : Utilisation générique de Helm"
 description: Commandes Helm essentielles pour gérer des charts Kubernetes.
 ---
+
+## Objectif
+
+Maîtriser les commandes Helm essentielles pour gérer des charts Kubernetes.
+
+Ce TP permet de voir comment :
+
+- ajouter et mettre à jour des dépôts de charts
+- rechercher et installer un chart
+- personnaliser une installation avec `--set` ou un fichier `values.yaml`
+- lister, mettre à jour et supprimer des releases
+- créer et déployer un chart personnalisé
+
+## Prérequis
+
+- Helm installé
+- Un cluster Kubernetes fonctionnel (Kind — voir TP 14)
+- kubectl installé
+
+```bash
+helm version
+kubectl version --client
+kubectl cluster-info
+```
 
 ## Ajouter un dépôt de charts
 

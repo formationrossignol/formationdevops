@@ -3,6 +3,28 @@ title: "TP 1 : Provider Docker de Terraform"
 description: Gérer images, conteneurs, réseaux et volumes Docker avec Terraform.
 ---
 
+## Objectif
+
+Découvrir le provider Docker de Terraform pour gérer des images, conteneurs, réseaux et volumes.
+
+Ce TP permet de voir comment :
+
+- configurer le provider `kreuzwerker/docker`
+- télécharger une image Docker
+- déployer un conteneur avec exposition de port
+- créer un réseau Docker
+- monter un volume dans un conteneur
+
+## Prérequis
+
+- Terraform installé
+- Docker installé et lancé
+
+```bash
+terraform version
+docker version
+```
+
 ## Préparer l'environnement Terraform
 
 Créez un répertoire pour votre projet :
