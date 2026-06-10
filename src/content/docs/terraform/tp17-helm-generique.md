@@ -18,7 +18,7 @@ Ce TP permet de voir comment :
 ## Prérequis
 
 - Helm installé
-- Un cluster Kubernetes fonctionnel (Kind — voir TP 14)
+- Un cluster Kubernetes fonctionnel (Kind  voir TP 14)
 - kubectl installé
 
 ```bash

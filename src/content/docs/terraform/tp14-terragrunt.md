@@ -37,7 +37,7 @@ tofu version
 terragrunt --version
 ```
 
-> Ce TP a été écrit avec **Terragrunt >= 0.67**. La commande `run-all` (avec tiret) est la syntaxe actuelle. Les versions antérieures utilisaient `run --all` — les deux peuvent être présentes selon l'installation.
+> Ce TP a été écrit avec **Terragrunt >= 0.67**. La commande `run-all` (avec tiret) est la syntaxe actuelle. Les versions antérieures utilisaient `run --all`  les deux peuvent être présentes selon l'installation.
 
 ## Arborescence
 
@@ -181,7 +181,7 @@ remote_state {
 
 > **Backend local** : on utilise un backend local pour ce TP. En production, on utiliserait un backend distant (S3, GCS, AzureRM). Le bloc `remote_state` avec `generate` produit automatiquement un fichier `backend.tf` dans chaque unité avant l'exécution de Terraform/OpenTofu.
 >
-> `if_exists = "overwrite"` indique à Terragrunt d'écraser le `backend.tf` s'il existe déjà. Ne pas créer de `backend.tf` manuellement dans les modules — il serait écrasé.
+> `if_exists = "overwrite"` indique à Terragrunt d'écraser le `backend.tf` s'il existe déjà. Ne pas créer de `backend.tf` manuellement dans les modules  il serait écrasé.
 
 ## Étape 4 : créer l'unité `naming`
 

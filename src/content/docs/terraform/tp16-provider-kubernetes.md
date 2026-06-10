@@ -19,7 +19,7 @@ Ce TP permet de voir comment :
 ## Prérequis
 
 - Terraform installé
-- Un cluster Kubernetes fonctionnel (Kind — voir TP 14)
+- Un cluster Kubernetes fonctionnel (Kind  voir TP 14)
 - kubectl installé et configuré
 
 ```bash
