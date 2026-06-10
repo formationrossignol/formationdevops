@@ -188,7 +188,10 @@ Appliquez et testez la persistance :
 terraform apply
 docker volume ls
 docker volume inspect nginx-data
+# Linux natif
 echo "Hello Terraform!" > /var/lib/docker/volumes/nginx-data/_data/index.html
+# macOS / Windows (Docker Desktop) : le volume est dans une VM, utiliser docker exec
+docker exec <nom_ou_id_du_conteneur> sh -c 'echo "Hello Terraform!" > /usr/share/nginx/html/index.html'
 curl http://localhost:8080
 ```
 
