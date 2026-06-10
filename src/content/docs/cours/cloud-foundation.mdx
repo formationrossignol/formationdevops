@@ -1,0 +1,32 @@
+---
+title: "Cours : Fondations du Cloud AWS"
+description: Fondamentaux du cloud, AWS CAF, EC2, HA, réseau, sécurité, IAM, IA/ML, bases de données, serverless, stockage, IaC et gouvernance.
+date: 2026-05-28
+---
+
+import SlideDeck from '../../../components/SlideDeck.astro';
+
+<SlideDeck src="/slides/cloud-foundation/" title="Fondations du Cloud AWS  IAWS010" />
+
+## Points clés du cours
+
+- **Fondamentaux cloud**  Définition NIST, 5 caractéristiques essentielles, IaaS/PaaS/SaaS, modèles de déploiement
+- **AWS CAF**  6 perspectives (Business, Personnes, Gouvernance, Plateforme, Sécurité, Opérations)
+- **Infrastructure globale**  39 régions, zones de disponibilité, console, CLI, SDK
+- **EC2**  Types d'instances, modèles d'achat (On-Demand, Reserved, Spot, Savings Plans)
+- **Haute disponibilité**  ELB, Auto Scaling Groups, scalabilité verticale vs horizontale
+- **Sécurité**  Responsabilité partagée, IAM, MFA, KMS, Secrets Manager, GuardDuty, WAF
+- **Bases de données**  RDS, Aurora, DynamoDB, ElastiCache, Redshift, DocumentDB, Neptune
+- **Serverless**  Lambda, API Gateway, SQS, SNS, EventBridge, Step Functions
+- **Stockage**  S3, EBS, EFS, classes de stockage, Snow Family
+- **IaC**  CloudFormation, Terraform
+- **Gouvernance**  AWS Organizations, SCP, Control Tower, CloudTrail, Config
+- **Certification**  CLF-C02 : structure, domaines, conseils
+
+## Travaux pratiques associés
+
+Après ce cours, consulte les TPs dans **Fondamentaux du Cloud** et **Sécurité dans le Cloud** :
+- [Lancer une instance EC2](/compute/instance-ec2/)
+- [Créer un VPC avec Terraform](/infrastructure/vpc-terraform/)
+- [Gestion des identités IAM](/securite-cloud/iam-free-tier/)
+- [Inventaire sécurité avec Prowler](/securite-cloud/prowler/)

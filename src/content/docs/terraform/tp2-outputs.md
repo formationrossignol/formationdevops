@@ -15,7 +15,7 @@ Ce TP permet de voir comment afficher :
 - une information calculée à partir de variables
 - un output sensible masqué
 
-**Niveau** : Débutant : **Environnement** : Docker local
+**Environnement** : Docker local
 
 ## Prérequis
 
