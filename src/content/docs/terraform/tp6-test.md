@@ -42,7 +42,7 @@ app-prod-api
 app-test-db
 ```
 
-Le module ne crée pas d'infrastructure réelle -- il est entièrement testable en local, sans provider ni compte cloud.
+Le module ne crée pas d'infrastructure réelle : il est entièrement testable en local, sans provider ni compte cloud.
 
 ## Arborescence
 
@@ -301,7 +301,7 @@ Success! 5 passed, 0 failed.
 
 ## Étape 7 : provoquer volontairement une erreur
 
-**Modification 1 -- supprimer la normalisation en minuscules**
+**Modification 1 : supprimer la normalisation en minuscules**
 
 Dans `main.tf`, remplacer :
 
@@ -325,7 +325,7 @@ terraform test
 
 Seul le test `valid_uppercase_input` doit échouer. Remettre la version correcte avec `lower()`.
 
-**Modification 2 -- changer le séparateur**
+**Modification 2 : changer le séparateur**
 
 Remplacer les tirets par des underscores :
 
@@ -347,7 +347,7 @@ Tous les tests sur le format du nom échouent. Remettre la version correcte avan
 terraform test -verbose
 ```
 
-Affiche chaque assertion évaluée et sa valeur -- utile pour le débogage en cas d'échec.
+Affiche chaque assertion évaluée et sa valeur : utile pour le débogage en cas d'échec.
 
 ## Étape 9 : exécuter un seul fichier de test
 

@@ -53,7 +53,7 @@ $env:VAULT_ADDR="http://127.0.0.1:8200"
 
 Activer Vault en mode développement :
 
-> **Conseil** : En mode `-dev`, Vault démarre avec un token root `root` et un backend en mémoire -- les données sont perdues a l'arret. Ce mode est uniquement pour le développement et les TP. La commande bloque le terminal : lancer en arrière-plan.
+> **Conseil** : En mode `-dev`, Vault démarre avec un token root `root` et un backend en mémoire : les données sont perdues a l'arret. Ce mode est uniquement pour le développement et les TP. La commande bloque le terminal : lancer en arrière-plan.
 
 Sur Windows (PowerShell) :
 

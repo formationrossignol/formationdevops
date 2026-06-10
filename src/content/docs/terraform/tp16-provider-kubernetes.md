@@ -76,7 +76,7 @@ kubectl get namespaces
 
 ## Créer un secret
 
-> **Note** : Le provider Kubernetes encode automatiquement les valeurs du bloc `data` en Base64 avant de les envoyer à l'API. Saisir les valeurs en clair dans Terraform -- `kubectl get secret -o yaml` affichera les valeurs encodées en Base64, c'est normal.
+> **Note** : Le provider Kubernetes encode automatiquement les valeurs du bloc `data` en Base64 avant de les envoyer à l'API. Saisir les valeurs en clair dans Terraform : `kubectl get secret -o yaml` affichera les valeurs encodées en Base64, c'est normal.
 
 ```hcl
 resource "kubernetes_secret" "demo-secret" {

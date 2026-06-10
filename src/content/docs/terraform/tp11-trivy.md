@@ -194,7 +194,7 @@ L'alerte sur le mode privilégié doit disparaître.
 
 ## Étape 6 : comprendre et traiter le secret en clair
 
-Le secret `ADMIN_PASSWORD=password123` est en clair dans la configuration -- Trivy le détecte via le nom de la clé.
+Le secret `ADMIN_PASSWORD=password123` est en clair dans la configuration : Trivy le détecte via le nom de la clé.
 
 Sortir la valeur du code source en utilisant une variable Terraform sensible.
 
@@ -393,7 +393,7 @@ jobs:
           exit-code: "1"
 ```
 
-> La version `@0.20.0` est épinglée explicitement. Utiliser `@master` dans une pipeline de sécurité est une mauvaise pratique -- le contenu du tag peut changer sans avertissement. Vérifier la dernière version stable sur [github.com/aquasecurity/trivy-action](https://github.com/aquasecurity/trivy-action/releases).
+> La version `@0.20.0` est épinglée explicitement. Utiliser `@master` dans une pipeline de sécurité est une mauvaise pratique : le contenu du tag peut changer sans avertissement. Vérifier la dernière version stable sur [github.com/aquasecurity/trivy-action](https://github.com/aquasecurity/trivy-action/releases).
 
 ## Nettoyage
 

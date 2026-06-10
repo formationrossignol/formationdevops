@@ -16,7 +16,7 @@ Tester OpenTofu sur un cas simple d'Infrastructure as Code :
 
 OpenTofu utilise la commande `tofu`. Les commandes principales sont similaires à Terraform : `tofu init`, `tofu plan`, `tofu apply` et `tofu destroy`. OpenTofu vise une compatibilité avec les configurations Terraform existantes, même si une migration doit être vérifiée au cas par cas.
 
-> **Note** : OpenTofu accepte le bloc `terraform {}` par compatibilité ascendante avec Terraform. Dans un projet OpenTofu natif, il est possible d'utiliser `tofu {}` à la place -- les deux sont équivalents.
+> **Note** : OpenTofu accepte le bloc `terraform {}` par compatibilité ascendante avec Terraform. Dans un projet OpenTofu natif, il est possible d'utiliser `tofu {}` à la place : les deux sont équivalents.
 
 ## Prérequis
 
@@ -176,7 +176,7 @@ Le conteneur doit apparaître avec le nom `tp-opentofu-nginx`.
 
 ## Étape 6 : modifier une variable
 
-En pratique, on ne modifie pas les valeurs `default` dans `variables.tf` pour changer un paramètre -- on utilise un fichier `.tfvars`. Créer un fichier `dev.tfvars` :
+En pratique, on ne modifie pas les valeurs `default` dans `variables.tf` pour changer un paramètre : on utilise un fichier `.tfvars`. Créer un fichier `dev.tfvars` :
 
 ```hcl
 container_name = "tp-opentofu-nginx"
@@ -190,7 +190,7 @@ Puis exécuter :
 tofu plan -var-file="dev.tfvars"
 ```
 
-Observer les changements proposés -- OpenTofu doit indiquer que le conteneur sera recréé car le port change.
+Observer les changements proposés : OpenTofu doit indiquer que le conteneur sera recréé car le port change.
 
 Appliquer :
 
@@ -226,7 +226,7 @@ Supprimer manuellement le conteneur hors OpenTofu :
 docker rm -f tp-opentofu-nginx
 ```
 
-> **Attention** : `docker stop` ne suffit pas -- OpenTofu ne gère pas l'état running/stopped d'un conteneur, uniquement son existence. Pour provoquer une vraie dérive détectable, il faut supprimer le conteneur avec `docker rm -f`.
+> **Attention** : `docker stop` ne suffit pas : OpenTofu ne gère pas l'état running/stopped d'un conteneur, uniquement son existence. Pour provoquer une vraie dérive détectable, il faut supprimer le conteneur avec `docker rm -f`.
 
 Puis relancer :
 

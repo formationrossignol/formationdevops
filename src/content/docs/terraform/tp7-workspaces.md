@@ -256,7 +256,7 @@ terraform workspace select test
 terraform state list
 ```
 
-Chaque workspace maintient un state isolé -- les ressources de `dev` et `test` sont indépendantes.
+Chaque workspace maintient un state isolé : les ressources de `dev` et `test` sont indépendantes.
 
 ## Étape 10 : supprimer un environnement
 
@@ -295,7 +295,7 @@ Tester : `http://localhost:8084`
 
 ## Exercice 2 : changer l'image selon l'environnement
 
-> **Attention** : cet exercice renomme la ressource `docker_image.nginx` en `docker_image.web`. Terraform va **détruire l'ancienne ressource et en créer une nouvelle** -- ce qui entraîne aussi la recréation du conteneur. C'est un comportement normal lors d'un renommage de ressource dans le code.
+> **Attention** : cet exercice renomme la ressource `docker_image.nginx` en `docker_image.web`. Terraform va **détruire l'ancienne ressource et en créer une nouvelle** : ce qui entraîne aussi la recréation du conteneur. C'est un comportement normal lors d'un renommage de ressource dans le code.
 
 Ajouter dans `variables.tf` :
 
@@ -393,8 +393,8 @@ Les workspaces sont utiles pour séparer plusieurs states avec le même code.
 
 Ils ont cependant des limites importantes :
 
-- le code est **identique** pour tous les environnements -- il est difficile d'avoir des configurations très différentes entre `dev` et `prod`
-- les fichiers `variables.tf` et `main.tf` sont **partagés** -- une modification affecte potentiellement tous les workspaces au prochain `apply`
+- le code est **identique** pour tous les environnements : il est difficile d'avoir des configurations très différentes entre `dev` et `prod`
+- les fichiers `variables.tf` et `main.tf` sont **partagés** : une modification affecte potentiellement tous les workspaces au prochain `apply`
 - en équipe, il est facile d'oublier dans quel workspace on se trouve avant d'exécuter un `apply` ou un `destroy`
 
 Pour un environnement critique comme `prod`, une séparation par dossiers peut être préférable :

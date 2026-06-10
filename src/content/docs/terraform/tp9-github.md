@@ -226,7 +226,7 @@ terraform apply
 ```
 
 Observer si Terraform recrée le dépôt ou modifie seulement sa description.
-La sortie du `plan` doit afficher `~ update in-place` -- Terraform modifie la ressource existante sans la recréer.
+La sortie du `plan` doit afficher `~ update in-place` : Terraform modifie la ressource existante sans la recréer.
 
 ## Exercice 2 : ajouter un label
 

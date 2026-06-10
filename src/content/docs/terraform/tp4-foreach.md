@@ -102,10 +102,10 @@ resource "docker_container" "web" {
 ```
 
 > Avec `for_each`, Terraform expose deux mots-clés dans le bloc de ressource :
-> - `each.key` : la clé de la map, ici `"nginx"`, `"apache"` ou `"caddy"` -- utilisée comme nom du conteneur.
+> - `each.key` : la clé de la map, ici `"nginx"`, `"apache"` ou `"caddy"` : utilisée comme nom du conteneur.
 > - `each.value` : l'objet associé à cette clé, ici `{ image = "...", external_port = ... }`.
 >
-> Terraform crée ainsi `docker_container.web["nginx"]`, `docker_container.web["apache"]` et `docker_container.web["caddy"]` -- des identifiants stables qui ne changent pas si l'on ajoute ou retire un autre élément de la map.
+> Terraform crée ainsi `docker_container.web["nginx"]`, `docker_container.web["apache"]` et `docker_container.web["caddy"]` : des identifiants stables qui ne changent pas si l'on ajoute ou retire un autre élément de la map.
 
 ## Fichier `outputs.tf`
 

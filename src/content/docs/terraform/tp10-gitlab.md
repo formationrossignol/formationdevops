@@ -18,7 +18,7 @@ Le provider GitLab officiel sur Terraform Registry est `gitlabhq/gitlab`. Il per
 
 ## Authentification GitLab
 
-Le token ne doit jamais être écrit dans les fichiers Terraform. Le provider GitLab lit nativement la variable d'environnement `GITLAB_TOKEN` -- aucune configuration supplémentaire n'est nécessaire dans les fichiers `.tf`.
+Le token ne doit jamais être écrit dans les fichiers Terraform. Le provider GitLab lit nativement la variable d'environnement `GITLAB_TOKEN` : aucune configuration supplémentaire n'est nécessaire dans les fichiers `.tf`.
 
 Sous Linux ou macOS :
 
@@ -156,7 +156,7 @@ resource "gitlab_project_variable" "app_name" {
 
 > Le bloc `provider "gitlab" {}` est vide : le provider lit automatiquement `GITLAB_TOKEN` depuis l'environnement. Aucune variable Terraform n'est nécessaire pour le token.
 >
-> Les labels utilisent `for_each` dès le départ -- chaque label est identifié par sa clé (`"bug"`, `"documentation"`, `"terraform"`), ce qui permet d'en ajouter ou supprimer un sans affecter les autres.
+> Les labels utilisent `for_each` dès le départ : chaque label est identifié par sa clé (`"bug"`, `"documentation"`, `"terraform"`), ce qui permet d'en ajouter ou supprimer un sans affecter les autres.
 
 ## Fichier `outputs.tf`
 
@@ -225,7 +225,7 @@ terraform plan
 terraform apply
 ```
 
-La sortie du `plan` doit afficher `~ update in-place` -- Terraform modifie la description sans recréer le projet.
+La sortie du `plan` doit afficher `~ update in-place` : Terraform modifie la description sans recréer le projet.
 
 ## Exercice 2 : ajouter un label
 

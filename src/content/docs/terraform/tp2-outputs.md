@@ -237,7 +237,7 @@ variable "admin_password" {
 }
 ```
 
-Fournir la valeur via variable d'environnement -- ne jamais la mettre en `default` :
+Fournir la valeur via variable d'environnement : ne jamais la mettre en `default` :
 
 Sous Linux ou macOS :
 
@@ -291,13 +291,13 @@ terraform destroy
 
 Les outputs servent à afficher des informations utiles après un déploiement : URL, identifiant, adresse IP, nom de ressource, commande à utiliser ensuite.
 
-Ils peuvent être consommés par d'autres outils -- script shell, pipeline CI/CD, ou autre projet Terraform via `terraform_remote_state`.
+Ils peuvent être consommés par d'autres outils : script shell, pipeline CI/CD, ou autre projet Terraform via `terraform_remote_state`.
 
 `sensitive = true` masque une valeur dans les affichages Terraform, mais ne la protège pas dans le state. Pour les secrets de production, utiliser un gestionnaire de secrets comme HashiCorp Vault ou AWS Secrets Manager.
 
 ## Variante sans Docker
 
-Pour un TP sans Docker, utiliser le provider `local` natif -- aucune installation supplémentaire nécessaire :
+Pour un TP sans Docker, utiliser le provider `local` natif : aucune installation supplémentaire nécessaire :
 
 ```hcl
 terraform {
